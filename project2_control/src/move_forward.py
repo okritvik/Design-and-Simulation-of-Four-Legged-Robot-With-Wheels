@@ -22,6 +22,27 @@ longpress w: increase the forward velocity
 longpress d: decrease the velocity and move backward
 longpress a: move to the left 
 longpress s: move to the right
+z - back bend
+q - back up
+e - front up
+c - frend bend
+1 - front left knee lift
+2 - front left knee down
+3 - front right knee lift
+4 - front right knee down
+5 - back left knee lift
+6 - back left knee down
+7 - back right knee lift
+8 - back right knee down
+r - front left hip lift
+f - front left hip down
+t - front right hip lift
+g - front right hip down
+y - back left hip lift
+h - back left hip down
+u - back right hip lift
+j - back right hip down
+o - initial position
 
 """
 
