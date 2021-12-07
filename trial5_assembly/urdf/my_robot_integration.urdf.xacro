@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!-- Name your robot here -->
+<robot name ="trial5_assembly" xmlns:xacro="http://wiki.ros.org/xacro">
+
+<!-- Include your urdf files here -->
+	<!-- Include Robot's urdf filepath -->
+	<!-- Include Lidar's urdf filepath -->
+	<xacro:include filename="$(find trial5_assembly)/urdf/trial5_assembly.urdf"/>
+	<xacro:include filename="$(find trial5_assembly)/urdf/ydlidar.urdf"/>
+
+<!-- Add your gazebo sensors here -->
+	
+	<gazebo reference="base_laser">
+		<!-- <gravity>true</gravity> -->
+		<!-- Gazebo has fixed set of Sensors types. Check them out here <> -->
+		<sensor name="laser" type="ray"> 
+			<!-- Add in your sensor characteristics -->
+			<pose> 0 0 0 0 0 0 </pose>
+			<visualise>true</visualise>
+			<update_rate>40</update_rate>
+			<!-- <always_on>true</always_on> -->
+			<ray>
+				<scan>
+					<horizontal>
+						<samples>720</samples>
+						<resolution>1</resolution>
+						<min_angle>-1.570796</min_angle>
+              			<max_angle>1.570796</max_angle>
+              		</horizontal>
+              	</scan>
+              	<range>
+              		<min>0.10</min>
+              		<max>30.0</max>
+              		<resolution>0.01</resolution>
+              	</range>
+              	<noise>
+              		<type>gaussian</type>
+              		<mean>0.0</mean>
+              		<stddev>0.01</stddev>
+              	</noise>
+            </ray>
+            <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
+            	<!-- Use topic name as /my_robot/scan -->
+				<topicName>/trial5_assembly/scan</topicName> 
+				<frameName>laser_frame</frameName>
+			</plugin>
+		</sensor>
+	</gazebo>
+
+
+ <!-- Gazebo plugin for control here is already added for you -->
+	<!-- <gazebo>
+		<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+			<robotNamespace>/robot_fourwheel</robotNamespace>
+			<robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+			<legacyModeNS>true</legacyModeNS>
+		</plugin>
+	</gazebo> -->
+
+
+<!-- Create a joint between your robot and sensor -->
+  <joint name="lidar_laser_joint" type="fixed">
+  	<axis xyz= "0 0 1"/>
+	<origin
+		xyz="0.2 0 0"
+		rpy="0 0 0" />
+    <parent link="dummy_link"/>
+    <child link="base_laser"/>
+	
+  </joint>
+	
+
+</robot>	
+
+

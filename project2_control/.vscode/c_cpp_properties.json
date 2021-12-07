@@ -1,0 +1,43 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/okritvik/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/okritvik/catkin_ws/src/ros_controllers/ackermann_steering_controller/include/**",
+        "/home/okritvik/catkin_ws/src/ros_control/combined_robot_hw/include/**",
+        "/home/okritvik/catkin_ws/src/ros_control/combined_robot_hw_tests/include/**",
+        "/home/okritvik/catkin_ws/src/control_toolbox/include/**",
+        "/home/okritvik/catkin_ws/src/ros_control/controller_interface/include/**",
+        "/home/okritvik/catkin_ws/src/ros_control/controller_manager/include/**",
+        "/home/okritvik/catkin_ws/src/ros_control/controller_manager_tests/include/**",
+        "/home/okritvik/catkin_ws/src/ros_controllers/diff_drive_controller/include/**",
+        "/home/okritvik/catkin_ws/src/ros_controllers/effort_controllers/include/**",
+        "/home/okritvik/catkin_ws/src/ros_controllers/force_torque_sensor_controller/include/**",
+        "/home/okritvik/catkin_ws/src/ros_controllers/forward_command_controller/include/**",
+        "/home/okritvik/catkin_ws/src/ros_controllers/four_wheel_steering_controller/include/**",
+        "/home/okritvik/catkin_ws/src/ros_controllers/gripper_action_controller/include/**",
+        "/home/okritvik/catkin_ws/src/ros_control/hardware_interface/include/**",
+        "/home/okritvik/catkin_ws/src/ros_controllers/imu_sensor_controller/include/**",
+        "/home/okritvik/catkin_ws/src/ros_control/joint_limits_interface/include/**",
+        "/home/okritvik/catkin_ws/src/ros_controllers/joint_state_controller/include/**",
+        "/home/okritvik/catkin_ws/src/ros_controllers/joint_trajectory_controller/include/**",
+        "/home/okritvik/catkin_ws/src/ros_controllers/position_controllers/include/**",
+        "/home/okritvik/catkin_ws/src/project2_control/include/**",
+        "/home/okritvik/catkin_ws/src/realtime_tools/include/**",
+        "/home/okritvik/catkin_ws/src/ros_control/transmission_interface/include/**",
+        "/home/okritvik/catkin_ws/src/turtlebot3_simulations/turtlebot3_fake/include/**",
+        "/home/okritvik/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo/include/**",
+        "/home/okritvik/catkin_ws/src/turtlebot3/turtlebot3_slam/include/**",
+        "/home/okritvik/catkin_ws/src/ros_controllers/velocity_controllers/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}

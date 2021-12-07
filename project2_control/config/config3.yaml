@@ -1,0 +1,79 @@
+trial6_assembly:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50  
+  # gazebo_ros_control/pidgains:
+  #   flwj: {p: 100.0, i: 10.0, d: 5.0}
+  #   frwj: {p: 100.0, i: 10.0, d: 5.0}
+  #   blwj: {p: 100.0, i: 10.0, d: 5.0}
+  #   brwj: {p: 100.0, i: 10.0, d: 5.0}
+  # Controllers ---------------------------------------
+  flwj_velocity_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: flwj
+    pid: {p: 100.0, i: 10.0, d: 5.0}
+  fltj_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fltj
+    pid: {p: 100, i: 1, d: 0.25}
+  flkj_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: flkj
+    pid: {p: 100, i: 1, d: 0.25}
+
+  blwj_velocity_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: blwj
+    pid: {p: 100.0, i: 10.0, d: 5.0}
+  bltj_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: bltj
+    pid: {p: 100, i: 1, d: 0.25}
+  blkj_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: blkj
+    pid: {p: 100, i: 1, d: 0.25}
+
+  frwj_velocity_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: frwj
+    pid: {p: 100.0, i: 10.0, d: 5.0}
+  frtj_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: frtj
+    pid: {p: 100, i: 1, d: 0.25}
+  frkj_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: frkj
+    pid: {p: 100, i: 1, d: 0.25}
+
+  brwj_velocity_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: brwj
+    pid: {p: 100.0, i: 10.0, d: 5.0}
+  brtj_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: brtj
+    pid: {p: 100, i: 1, d: 0.25}
+  brkj_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: brkj
+    pid: {p: 100, i: 1, d: 0.25}
+
+  m1j_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: m1j
+    pid: {p: 0.01, i: 0.01, d: 0}
+  m2j_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: m2j
+    pid: {p: 0.01, i: 0.01, d: 0}
+  m3j_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: m3j
+    pid: {p: 0.01, i: 0.01, d: 0}
+  gripperj_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: gripperj
+    pid: {p: 0.01, i: 0.01, d: 0}

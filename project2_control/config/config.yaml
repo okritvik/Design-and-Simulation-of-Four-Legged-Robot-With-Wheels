@@ -1,0 +1,48 @@
+trial3_assembly:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50  
+
+  # Controllers ---------------------------------------
+
+  fltj_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fltj
+    pid: {p: 100, i: 1, d: 0.25}
+  
+  flkj_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: flkj
+    pid: {p: 100, i: 1, d: 0.25}
+
+
+  bltj_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: bltj
+    pid: {p: 100, i: 1, d: 0.25}
+  
+  blkj_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: blkj
+    pid: {p: 100, i: 1, d: 0.25}
+
+  frtj_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: frtj
+    pid: {p: 100, i: 1, d: 0.25}
+  
+  frkj_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: frkj
+    pid: {p: 100, i: 1, d: 0.25}
+
+  brtj_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: brtj
+    pid: {p: 100, i: 1, d: 0.25}
+  
+  brkj_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: brkj
+    pid: {p: 100, i: 1, d: 0.25}
