@@ -43,10 +43,10 @@ h - back left hip down
 u - back right hip lift
 j - back right hip down
 o - initial position
-
+b - make front joint angles equal to one of the front legs and back joint angles equal to one of the back legs
 """
 
-
+#takes the input key
 def getKey():
     settings = termios.tcgetattr(sys.stdin)
     tty.setraw(sys.stdin.fileno())
@@ -59,6 +59,7 @@ def getKey():
     termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
     return key
 
+#function that takes input key and publishes to the controllers topics
 def stand_straight():
     settings = termios.tcgetattr(sys.stdin)
     rospy.init_node('Stand',anonymous=False)
@@ -234,6 +235,7 @@ def stand_straight():
             blw_velocity.publish(velocity+l_diff_velocity)
             brw_velocity.publish(velocity+r_diff_velocity)
         termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
+        
 if __name__ == '__main__':
     try:
         stand_straight()
