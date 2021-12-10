@@ -50,5 +50,5 @@ Note that these packages are essential resources to the main project and they we
 	b - make front joint angles equal to one of the front legs and back joint angles equal to one of the back legs
 	
 7) To run inverse kinematics validation:
-	Moving the front right leg in half sinusoidal wave motion = |sinx|:
+	Moving the front right leg in triangular wave motion = /\ which is computed with the sin function with different amplitude :
 		rosrun project2_control validation.py
