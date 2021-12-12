@@ -52,3 +52,5 @@ Note that these packages are essential resources to the main project and they we
 7) To run inverse kinematics validation:
 	Moving the front right leg in triangular wave motion = /\ which is computed with the sin function with different amplitude :
 		rosrun project2_control validation.py
+
+The workspace study and inverse kinematics joint angles plots are added in the repository. Required packages are: matplotlib and math. Python Version Used: Python 3
